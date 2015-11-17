@@ -13,9 +13,6 @@ var lightboxSizer = (function(){
 		lightBox.css('margin-left', -(newWidth/2));
 	}
 
-	function getDocHeight(){
-		return $(document).height();
-	}
 
 	function scrollPercent(){
 		var totalHeight = $(document).height();
@@ -25,7 +22,6 @@ var lightboxSizer = (function(){
 	}
 
 	function calcWidth(){
-		var percentScrolled = (($(document).scrollTop())/getDocHeight());
 		var width = 800 - (((800/3)*2) * scrollPercent());
 		return width;
 	}
